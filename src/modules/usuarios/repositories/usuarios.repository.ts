@@ -25,7 +25,7 @@ export class UsuariosRepository
     return this.save(usuarioEntity);           
   }
 
-  async updateUsuario(id: number, usuario: DeepPartial<Usuario>): Promise<Usuario> {
+  async updateUsuario(id: number, usuario: DeepPartial<Usuario>): Promise<any> {
     await this.update(id, usuario);           
     return this.findOneById(id);
   }
